@@ -19,7 +19,7 @@
 					</attributes>
 				</naming>
 				<display_template/>
-				<icon>asset/img/certificate.svg</icon>
+				<icon>assets/img/certificate.svg</icon>
 				<reconciliation>
 					<attributes>
 						<attribute id="name"/>
