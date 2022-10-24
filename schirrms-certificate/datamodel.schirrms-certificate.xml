@@ -84,7 +84,7 @@
             <item id="name">
               <rank>10</rank>
             </item>
-            <item id="org_name">
+            <item id="org_id">
               <rank>20</rank>
             </item>
             <item id="description">
@@ -118,7 +118,7 @@
             <item id="name">
               <rank>10</rank>
             </item>
-            <item id="org_name">
+            <item id="org_id">
               <rank>20</rank>
             </item>
             <item id="description">
@@ -137,7 +137,7 @@
             <item id="name">
               <rank>10</rank>
             </item>
-            <item id="org_name">
+            <item id="org_id">
               <rank>20</rank>
             </item>
             <item id="description">
