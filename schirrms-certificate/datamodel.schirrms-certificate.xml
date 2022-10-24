@@ -26,6 +26,7 @@
 					</attributes>
 				</reconciliation>
 			</properties>
+      <fields>
 				<field id="name" xsi:type="AttributeString">
 					<sql>name</sql>
 					<default_value/>
