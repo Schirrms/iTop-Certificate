@@ -86,7 +86,7 @@
       </fields>
       <methods>
         <method id="ComputeValues">
-          <comment>compute number of days until cetificate expiration</comment>
+          <comment>// compute number of days until cetificate expiration</comment>
           <static>false</static>
           <access>public</access>
           <type>Overload-DBObject</type>
