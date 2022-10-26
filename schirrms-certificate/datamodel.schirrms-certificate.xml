@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.6">
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.7">
   <constants>
   </constants>
   <classes>
@@ -70,6 +70,14 @@
 					<sql>expiration_date</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
+        <field id="expiration_days" xsi:type="AttributeString">
+          <dependencies>
+            <attribute id="expiration_date"/>
+          </dependencies>
+					<sql>expiration_days</sql>
+          <tracking_level>none</tracking_level>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
         <field id="comment" xsi:type="AttributeText">
 					<sql>comment</sql>
 					<default_value/>
@@ -77,6 +85,22 @@
 				</field>
       </fields>
       <methods>
+        <method id="ComputeValues">
+          <comment>compute number of days until cetificate expiration</comment>
+          <static>false</static>
+          <access>public</access>
+          <type>Overload-DBObject</type>
+          <code><![CDATA[ public function ComputeValues()
+{
+  parent::ComputeValues();
+
+  $dateend = new DateTimeImmutable($this->Get('expiration_date'));
+  $datenow = new DateTimeImmutable(date('Y-m-d'));
+  $interval = $datenow->diff($dateend);
+  // echo $interval->format("%r%a days\n");
+  $this->Set('expiration_days', $interval->format('%r%a'));
+}]]></code>
+        </method>
       </methods>
       <presentation>
         <details>
@@ -104,6 +128,9 @@
             </item>
             <item id="expiration_date">
               <rank>60</rank>
+            </item>
+            <item id="expiration_days">
+              <rank>65</rank>
             </item>
             <item id="san">
               <rank>70</rank>
