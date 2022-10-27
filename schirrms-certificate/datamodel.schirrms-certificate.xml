@@ -70,7 +70,7 @@
 					<sql>expiration_date</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-        <field id="expiration_days" xsi:type="AttributeString">
+        <field id="expiration_days" xsi:type="AttributeRemainingDays">
           <dependencies>
             <attribute id="expiration_date"/>
           </dependencies>
@@ -94,8 +94,8 @@
 {
   parent::ComputeValues();
 
-  $dateend = new DateTimeImmutable($this->Get('expiration_date'));
-  $datenow = new DateTimeImmutable(date('Y-m-d'));
+  $dateend = new DateTime($this->Get('expiration_date'));
+  $datenow = new DateTime(date('Y-m-d'));
   $interval = $datenow->diff($dateend);
   // echo $interval->format("%r%a days\n");
   $this->Set('expiration_days', $interval->format('%r%a'));
