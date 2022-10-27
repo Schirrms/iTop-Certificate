@@ -49,7 +49,7 @@ class AttributeRemainingDays extends AttributeString
                 }
             }
             else {
-                $sNewRemaining = 'Test - null - '.$oHostObject->Get('name').' - '.$oHostObject->Get('friendlyname').' - '.$oHostObject->GetKey();
+                $sNewRemaining = 'Test - null - '.$oHostObject->Get('expiration_date').' - '.$oHostObject->GetKey();
             }
             if ( $sNewRemaining != $sRemaining ) {
                 $oHostObject->Set('expiration_days', $sNewRemaining);
