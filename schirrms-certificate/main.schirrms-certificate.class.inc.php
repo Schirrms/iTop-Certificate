@@ -36,7 +36,7 @@ class AttributeRemainingDays extends AttributeString
     {
         $sRemaining = parent::GetAsHTML($sValue, $oHostObject, $bLocalize);
         if ( ! is_null($oHostObject) ) {
-            $sNewRemaining = '';
+            $sNewRemaining = 'Test';
             if ( defined ( $oHostObject->Get('expiration_date') ) ) {
                 $dExpiration = new DateTime($oHostObject->Get('expiration_date'));
                 $dControl = new DateTime('');
