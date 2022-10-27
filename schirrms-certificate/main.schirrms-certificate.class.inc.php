@@ -52,9 +52,10 @@ class AttributeRemainingDays extends AttributeString
             else {
                 $sNewRemaining = 'Test - null - '.$oHostObject->Get('expiration_date').' - '.$oHostObject->GetKey();
             }
-            if ( $sNewRemaining !== $sRemaining ) {
+            if ( strcmp($sNewRemaining, $sRemaining) !== 0 ) {
                 $oHostObject->Set('expiration_days', $sNewRemaining);
                 $oHostObject->DBWrite();
+                $sNewRemaining .= " +Write";
             }
             return $sNewRemaining;
         }
