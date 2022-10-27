@@ -21,12 +21,12 @@ class AttributeRemainingDays extends AttributeString
                 $dDateNow = new DateTime(date('Y-m-d'));
                 $interval = $dDateNow->diff($dExpiration);
                 $sNewRemaining = $interval->format('%r%a');
-                if ( $sNewRemaining != $sRemaining ) {
-                    $this->Set('expiration_days', $sNewRemaining);
-                }
             }
         }
-        return $sNewRemaining;
+        if ( $sNewRemaining != $sRemaining ) {
+            $this->Set('expiration_days', $sNewRemaining);
+        }
+    return $sNewRemaining;
     }
 
     /**
@@ -44,10 +44,10 @@ class AttributeRemainingDays extends AttributeString
                 $dDateNow = new DateTime(date('Y-m-d'));
                 $interval = $dDateNow->diff($dExpiration);
                 $sNewRemaining = $interval->format('%r%a');
-                if ( $sNewRemaining != $sRemaining ) {
-                    $this->Set('expiration_days', $sNewRemaining);
-                }
             }
+        }
+        if ( $sNewRemaining != $sRemaining ) {
+            $this->Set('expiration_days', $sNewRemaining);
         }
         return $sNewRemaining;
     }

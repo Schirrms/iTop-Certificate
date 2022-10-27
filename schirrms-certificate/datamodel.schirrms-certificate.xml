@@ -157,6 +157,9 @@
             <item id="expiration_date">
               <rank>60</rank>
             </item>
+            <item id="expiration_days">
+              <rank>65</rank>
+            </item>
           </items>
         </list>
         <search>
