@@ -13,8 +13,8 @@ class AttributeRemainingDays extends AttributeString
     {
         $sRemaining = parent::GetValueLabel($sValue);
         $sNewRemaining = '';
-        if ( defined ( $this->Get('expiration_date') ) ) {
-            $dExpiration = new DateTime($this->Get('expiration_date'));
+        if ( defined ( parent::Get('expiration_date') ) ) {
+            $dExpiration = new DateTime(parent::Get('expiration_date'));
             $dControl = new DateTime('');
             $datectrl = $dControl->diff($dExpiration);
             if ( $datectrl->format('%a') != 0 && $datectrl->format('%r%a') > -10000 ) {
@@ -24,7 +24,7 @@ class AttributeRemainingDays extends AttributeString
             }
         }
         if ( $sNewRemaining != $sRemaining ) {
-            $this->Set('expiration_days', $sNewRemaining);
+            parent::Set('expiration_days', $sNewRemaining);
         }
     return $sNewRemaining;
     }
@@ -36,8 +36,8 @@ class AttributeRemainingDays extends AttributeString
     {
         $sRemaining = parent::GetAsHTML($sValue, $oHostObject, $bLocalize);
         $sNewRemaining = '';
-        if ( defined ( $this->Get('expiration_date') ) ) {
-            $dExpiration = new DateTime($this->Get('expiration_date'));
+        if ( defined ( parent::Get('expiration_date') ) ) {
+            $dExpiration = new DateTime(parent::Get('expiration_date'));
             $dControl = new DateTime('');
             $datectrl = $dControl->diff($dExpiration);
             if ( $datectrl->format('%a') != 0 && $datectrl->format('%r%a') > -10000 ) {
@@ -47,7 +47,7 @@ class AttributeRemainingDays extends AttributeString
             }
         }
         if ( $sNewRemaining != $sRemaining ) {
-            $this->Set('expiration_days', $sNewRemaining);
+            parent::Set('expiration_days', $sNewRemaining);
         }
         return $sNewRemaining;
     }
