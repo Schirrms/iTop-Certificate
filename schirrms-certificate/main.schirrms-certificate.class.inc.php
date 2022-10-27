@@ -49,6 +49,7 @@ class AttributeRemainingDays extends AttributeString
             }
             if ( $sNewRemaining != $sRemaining ) {
                 $oHostObject->Set('expiration_days', $sNewRemaining);
+                $oHostObject->DBWrite();
             }
             return $sNewRemaining;
         }
