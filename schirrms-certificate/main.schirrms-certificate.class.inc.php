@@ -13,7 +13,7 @@ class AttributeRemainingDays extends AttributeString
     {
         $sRemaining = parent::Get($sValue);
         $sNewRemaining = '';
-        if ( defined ( $this->Get('expiration_date') ) ) {
+        if ( defined ( parent::Get('expiration_date') ) ) {
             $dExpiration = new DateTime($this->Get('expiration_date'));
             $dControl = new DateTime('');
             $datectrl = $dControl->diff($dExpiration);
@@ -23,7 +23,7 @@ class AttributeRemainingDays extends AttributeString
                 $interval = $dDateNow->diff($dExpiration);
                 $sNewRemaining = $interval->format('%r%a');
                 if ( $sNewRemaining != $sRemaining ) {
-                    $this->Set('expiration_days', $sNewRemaining);
+                    parent::Set('expiration_days', $sNewRemaining);
                 }
             }
         }
