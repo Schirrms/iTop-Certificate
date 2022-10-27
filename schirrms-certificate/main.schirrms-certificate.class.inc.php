@@ -38,6 +38,7 @@ class AttributeRemainingDays extends AttributeString
         if ( ! is_null($oHostObject) ) {
             $sNewRemaining = 'Test';
             if ( defined ( $oHostObject->Get('expiration_date') ) ) {
+                $sNewRemaining = "Test - ".$oHostObject->Get('expiration_date');
                 $dExpiration = new DateTime($oHostObject->Get('expiration_date'));
                 $dControl = new DateTime('');
                 $datectrl = $dControl->diff($dExpiration);
