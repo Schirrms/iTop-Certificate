@@ -43,7 +43,7 @@ class AttributeRemainingDays extends AttributeString
     {
         $sRemaining = parent::Get($sValue);
         
-        return UpdateRemainingDays($sRemaining, $oHostObject);
+        return Self::UpdateRemainingDays($sRemaining, $oHostObject);
     }
 
     /**
@@ -54,7 +54,7 @@ class AttributeRemainingDays extends AttributeString
     {
         $sRemaining = parent::GetValueLabel($sValue);
 
-        return UpdateRemainingDays($sRemaining, $oHostObject);
+        return Self::UpdateRemainingDays($sRemaining, $oHostObject);
     }
 
     /**
@@ -65,17 +65,17 @@ class AttributeRemainingDays extends AttributeString
     {
         $sRemaining = parent::GetAsHTML($sValue, $oHostObject, $bLocalize);
 
-        return UpdateRemainingDays($sRemaining, $oHostObject);
+        return Self::UpdateRemainingDays($sRemaining, $oHostObject);
     }
 
     /**
      * @inheritdoc
      */
     
-    public GetAsXML($sAttCode, $bLocalize = true)
+    public function GetAsXML($sAttCode, $bLocalize = true)
     {
         $sRemaining = parent::GetAsXML($sValue, $bLocalize = true);
 
-        return UpdateRemainingDays($sRemaining, $oHostObject);
+        return Self::UpdateRemainingDays($sRemaining, $oHostObject);
     }
 }
