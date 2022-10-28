@@ -107,7 +107,7 @@
   $interval = $datenow->diff($dateend);
   // echo $interval->format("%r%a days\n");
   $this->Set('expiration_days', $interval->format('%r%a'));
-  $this->Set('expiration_days2', $this->Get('expiration_date')." 0:0:0");
+  $this->Set('expiration_days2', $this->Get('expiration_date')." 00:00:00");
 }]]></code>
         </method>
       </methods>
