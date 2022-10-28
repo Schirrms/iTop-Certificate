@@ -70,7 +70,8 @@
 					<sql>expiration_date</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-				<field id="expiration_days" xsi:type="AttributeRemainingDays">
+				<!-- <field id="expiration_days" xsi:type="AttributeRemainingDays"> -->
+				<field id="expiration_days" xsi:type="AttributeDate">
 					<dependencies>
 						<attribute id="expiration_date"/>
 					</dependencies>
