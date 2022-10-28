@@ -12,7 +12,7 @@ class AttributeRemainingDays extends AttributeDate
     private function FormatRemainingDays($dRemaining)
     {
         $sRemaining = '';
-        if ( $dRemaining !== null ) {
+        if ( $dRemaining !== null && preg_match('/^\d{2,4}-\d{1,2}-\d{1,2}$/', $dRemaining) ) {
             $dExpiration = new DateTime($dRemaining);
             $dControl = new DateTime('');
             $datectrl = $dControl->diff($dExpiration);
