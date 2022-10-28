@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.7">
-  <constants>
-  </constants>
-  <classes>
+	<constants>
+	</constants>
+	<classes>
 		<class id="Certificate" _delta="define">
 			<parent>cmdbAbstractObject</parent>
 			<properties>
@@ -26,7 +26,7 @@
 					</attributes>
 				</reconciliation>
 			</properties>
-      <fields>
+			<fields>
 				<field id="name" xsi:type="AttributeString">
 					<sql>name</sql>
 					<default_value/>
@@ -46,141 +46,141 @@
 					<extkey_attcode>org_id</extkey_attcode>
 					<target_attcode>name</target_attcode>
 				</field>
-        <field id="provider_name" xsi:type="AttributeString">
+				<field id="provider_name" xsi:type="AttributeString">
 					<sql>provider_name</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-        <field id="provider_org" xsi:type="AttributeString">
+				<field id="provider_org" xsi:type="AttributeString">
 					<sql>provider_org</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-        <field id="san" xsi:type="AttributeText">
+				<field id="san" xsi:type="AttributeText">
 					<sql>san</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-        <field id="serial_number" xsi:type="AttributeString">
+				<field id="serial_number" xsi:type="AttributeString">
 					<sql>serial_number</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-        <field id="delivery_date" xsi:type="AttributeDate">
+				<field id="delivery_date" xsi:type="AttributeDate">
 					<sql>delivery_date</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-        <field id="expiration_date" xsi:type="AttributeDate">
+				<field id="expiration_date" xsi:type="AttributeDate">
 					<sql>expiration_date</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-        <field id="expiration_days" xsi:type="AttributeRemainingDays">
-          <dependencies>
-            <attribute id="expiration_date"/>
-          </dependencies>
+				<field id="expiration_days" xsi:type="AttributeRemainingDays">
+					<dependencies>
+						<attribute id="expiration_date"/>
+					</dependencies>
 					<sql>expiration_days</sql>
-          <tracking_level>none</tracking_level>
+					<tracking_level>none</tracking_level>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-        <field id="comment" xsi:type="AttributeText">
+				<field id="comment" xsi:type="AttributeText">
 					<sql>comment</sql>
 					<default_value/>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-      </fields>
-      <methods>
-        <method id="ComputeValues">
-          <comment>// compute number of days until cetificate expiration</comment>
-          <static>false</static>
-          <access>public</access>
-          <type>Overload-DBObject</type>
-          <code><![CDATA[ public function ComputeValues()
+			</fields>
+			<methods>
+				<method id="ComputeValues">
+					<comment>// compute number of days until cetificate expiration</comment>
+					<static>false</static>
+					<access>public</access>
+					<type>Overload-DBObject</type>
+					<code><![CDATA[ public function ComputeValues()
 {
-  parent::ComputeValues();
-  // force a copy of the value attribute_date in this field
-  $this->Set('expiration_days', $this->Get('expiration_date'));
+	parent::ComputeValues();
+	// force a copy of the value attribute_date in this field
+	$this->Set('expiration_days', $this->Get('expiration_date'));
 }]]></code>
-        </method>
-      </methods>
-      <presentation>
-        <details>
-          <items>
-            <item id="name">
-              <rank>10</rank>
-            </item>
-            <item id="org_id">
-              <rank>20</rank>
-            </item>
-            <item id="description">
-              <rank>30</rank>
-            </item>
-            <item id="provider_name">
-              <rank>40</rank>
-            </item>
-            <item id="provider_org">
-              <rank>45</rank>
-            </item>
-            <item id="serial_number">
-              <rank>50</rank>
-            </item>
-            <item id="delivery_date">
-              <rank>55</rank>
-            </item>
-            <item id="expiration_date">
-              <rank>60</rank>
-            </item>
-            <item id="expiration_days">
-              <rank>65</rank>
-            </item>
-            <item id="san">
-              <rank>70</rank>
-            </item>
-            <item id="comment">
-              <rank>80</rank>
-            </item>
-          </items>
-        </details>
-        <list>
-           <items>
-            <item id="name">
-              <rank>10</rank>
-            </item>
-            <item id="org_id">
-              <rank>20</rank>
-            </item>
-            <item id="description">
-              <rank>30</rank>
-            </item>
-            <item id="delivery_date">
-              <rank>55</rank>
-            </item>
-            <item id="expiration_date">
-              <rank>60</rank>
-            </item>
-            <item id="expiration_days">
-              <rank>65</rank>
-            </item>
-          </items>
-        </list>
-        <search>
-           <items>
-            <item id="name">
-              <rank>10</rank>
-            </item>
-            <item id="org_id">
-              <rank>20</rank>
-            </item>
-            <item id="description">
-              <rank>30</rank>
-            </item>
-            <item id="delivery_date">
-              <rank>55</rank>
-            </item>
-            <item id="expiration_date">
-              <rank>60</rank>
-            </item>
-          </items>
-        </search>
-      </presentation>
-    </class>
-  </classes>
-  <menus>
+				</method>
+			</methods>
+			<presentation>
+				<details>
+					<items>
+						<item id="name">
+							<rank>10</rank>
+						</item>
+						<item id="org_id">
+							<rank>20</rank>
+						</item>
+						<item id="description">
+							<rank>30</rank>
+						</item>
+						<item id="provider_name">
+							<rank>40</rank>
+						</item>
+						<item id="provider_org">
+							<rank>45</rank>
+						</item>
+						<item id="serial_number">
+							<rank>50</rank>
+						</item>
+						<item id="delivery_date">
+							<rank>55</rank>
+						</item>
+						<item id="expiration_date">
+							<rank>60</rank>
+						</item>
+						<item id="expiration_days">
+							<rank>65</rank>
+						</item>
+						<item id="san">
+							<rank>70</rank>
+						</item>
+						<item id="comment">
+							<rank>80</rank>
+						</item>
+					</items>
+				</details>
+				<list>
+					 <items>
+						<item id="name">
+							<rank>10</rank>
+						</item>
+						<item id="org_id">
+							<rank>20</rank>
+						</item>
+						<item id="description">
+							<rank>30</rank>
+						</item>
+						<item id="delivery_date">
+							<rank>55</rank>
+						</item>
+						<item id="expiration_date">
+							<rank>60</rank>
+						</item>
+						<item id="expiration_days">
+							<rank>65</rank>
+						</item>
+					</items>
+				</list>
+				<search>
+					 <items>
+						<item id="name">
+							<rank>10</rank>
+						</item>
+						<item id="org_id">
+							<rank>20</rank>
+						</item>
+						<item id="description">
+							<rank>30</rank>
+						</item>
+						<item id="delivery_date">
+							<rank>55</rank>
+						</item>
+						<item id="expiration_date">
+							<rank>60</rank>
+						</item>
+					</items>
+				</search>
+			</presentation>
+		</class>
+	</classes>
+	<menus>
 		<menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
 			<rank>1</rank>
 			<parent>ConfigManagement</parent>
@@ -200,11 +200,11 @@
 				</cells>
 			</definition>
 		</menu>
-  </menus>
-  <user_rights>
-    <groups>
-    </groups>
-    <profiles>
-    </profiles>
-  </user_rights>
+	</menus>
+	<user_rights>
+		<groups>
+		</groups>
+		<profiles>
+		</profiles>
+	</user_rights>
 </itop_design>
