@@ -33,6 +33,14 @@ class AttributeDateWithRemainingDays extends AttributeDate
 					$sDiff = Dict::Format('UI:datewithremainingdays_latedays', -$iInterval);
 				}
 				$sRemaining = "$dRemaining ($sDiff)";
+				// add some colorations
+				if ($iInterval <= 30 ) {
+					$scolor='gold';
+					if ($iInterval <= 7 ) {
+						$sColor='red';
+					}
+					$sRemaining = "<div style=\"color:$sColor;\">$sRemaining</div>";
+				}
 			}
 		}
 		return $sRemaining;
