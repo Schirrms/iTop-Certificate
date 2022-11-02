@@ -20,6 +20,7 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:Certificate/Attribute:expiration_date' => 'Certificate Expiration Date',
 	'Class:Certificate/Attribute:san' => 'Subject Alternate Name(s)',
 	'Class:Certificate/Attribute:comment' => 'Comments',
+	'Class:Certificate/UniquenessRule:serial_number' => 'Serial number must be unique. An existing Certificate has already this serial number',
 	'UI:datewithremainingdays_days' => ' %1$d Day(s) Left',
 	'UI:datewithremainingdays_latedays' => ' Expired since %1$d Day(s) ',
 ));

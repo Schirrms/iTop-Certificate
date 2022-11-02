@@ -20,6 +20,7 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'Class:Certificate/Attribute:expiration_date' => 'Date d\'expiration du certificat',
 	'Class:Certificate/Attribute:san' => 'Autres noms de l\'objet du certificat',
 	'Class:Certificate/Attribute:comment' => 'Commentaires',
+	'Class:Certificate/UniquenessRule:serial_number' => 'Le n° de série doit être unique. Un certificat existant dispose déjà de ce n° de série',
 	'UI:datewithremainingdays_days' => ' %1$d jour(s) restant(s) ',
 	'UI:datewithremainingdays_latedays' => ' Expiré depuis %1$d jour(s) ',
 ));
