@@ -35,7 +35,7 @@ class AttributeDateWithRemainingDays extends AttributeDate
 				$sRemaining = "$dRemaining ($sDiff)";
 				// add some colorations
 				if ($iInterval <= 30 ) {
-					$scolor='gold';
+					$sColor='gold';
 					if ($iInterval <= 7 ) {
 						$sColor='red';
 					}
