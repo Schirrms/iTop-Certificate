@@ -36,7 +36,7 @@ class AttributeDateWithRemainingDays extends AttributeDate
 					if ($iInterval <= 7 ) {
 						$sColor='red';
 					}
-					$sRemaining = "<div style=\"color:$sColor;\">$sRemaining</div>";
+					$sRemaining = "<div style=\"color:$sColor;background-color:darkcyan;\">$sRemaining</div>";
 				}
 			}
 		}
