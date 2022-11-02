@@ -48,3 +48,22 @@ class AttributeDateWithRemainingDays extends AttributeDate
 		return self::FormatRemainingDays($sValue);
 	}
 }
+
+/**
+ * Class AttributeHexaChain : display a string as hexa, with : as separator
+ * the sting is sipposed to have a validation pattern : 
+ * <validation_pattern>^[a-fA-F0-9]$</validation_pattern>
+ */
+
+class AttributeHexaChain extends AttributeString
+{
+	public function GetAsHTML($sValue, $oHostObject = null, $bLocalize = true)
+	{
+		$sHexa = $sValue;
+		if ( ( strlen($sValue) % 2 ) === 1 ) {
+			$svalue = '0'.$sValue;
+		}
+		$sHexa = strtolower(implode(':', str_split($sValue, 2)));
+		return $sHexa;
+	}
+}
