@@ -24,12 +24,13 @@ class AttributeDateWithRemainingDays extends AttributeDate
 			if ( $datectrl->format('%a') != 0 && $datectrl->format('%r%a') > -10000 ) {
 				$dDateNow = new DateTime(date('Y-m-d'));
 				$interval = $dDateNow->diff($dExpiration);
-				if ( $interval >= 0 ) {
-					$sDiff = Dict::Format('Certificate/UI:days', $interval);
+				$iInterval = $interval->format('%r%a');
+				if ( $iInterval >= 0 ) {
+					$sDiff = Dict::Format('Certificate/UI:days', $iInterval);
 				}
 				else
 				{
-					$sDiff = Dict::Format('Certificate/UI:latedays', -$interval);
+					$sDiff = Dict::Format('Certificate/UI:latedays', -$iInterval);
 				}
 				$sRemaining = "$dRemaining ($sDiff)";
 			}
