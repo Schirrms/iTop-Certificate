@@ -66,16 +66,8 @@
 					<sql>delivery_date</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
-				<field id="expiration_date" xsi:type="AttributeDate">
+				<field id="expiration_date" xsi:type="AttributeDateWithRemainingDays">
 					<sql>expiration_date</sql>
-					<is_null_allowed>true</is_null_allowed>
-				</field>
-				<field id="expiration_days" xsi:type="AttributeRemainingDays">
-					<dependencies>
-						<attribute id="expiration_date"/>
-					</dependencies>
-					<sql>expiration_days</sql>
-					<tracking_level>none</tracking_level>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
 				<field id="comment" xsi:type="AttributeText">
@@ -85,18 +77,6 @@
 				</field>
 			</fields>
 			<methods>
-				<method id="ComputeValues">
-					<comment>// compute number of days until cetificate expiration</comment>
-					<static>false</static>
-					<access>public</access>
-					<type>Overload-DBObject</type>
-					<code><![CDATA[ public function ComputeValues()
-{
-	parent::ComputeValues();
-	// force a copy of the value attribute_date in this field
-	$this->Set('expiration_days', $this->Get('expiration_date'));
-}]]></code>
-				</method>
 			</methods>
 			<presentation>
 				<details>
@@ -125,9 +105,6 @@
 						<item id="expiration_date">
 							<rank>60</rank>
 						</item>
-						<item id="expiration_days">
-							<rank>65</rank>
-						</item>
 						<item id="san">
 							<rank>70</rank>
 						</item>
@@ -152,9 +129,6 @@
 						</item>
 						<item id="expiration_date">
 							<rank>60</rank>
-						</item>
-						<item id="expiration_days">
-							<rank>65</rank>
 						</item>
 					</items>
 				</list>

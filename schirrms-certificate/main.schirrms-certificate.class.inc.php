@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Class AttributeRemainingDays :
- * with a stored date attribute, display the reminind days between today and this date
+ * Class AttributeDateWithRemainingDays :
+ * For a date attribute, display the data and the remaining days between today and this date
  * result can be negative
  * Toto : in GetAsHtml, rentun the result in 
  *  * orange if less than 30 days 
  *  * red if less than 7 days
  */
-class AttributeRemainingDays extends AttributeDate
+class AttributeDateWithRemainingDays extends AttributeDate
 {
 	/**
 	 * @inheritdoc
@@ -24,7 +24,7 @@ class AttributeRemainingDays extends AttributeDate
 			if ( $datectrl->format('%a') != 0 && $datectrl->format('%r%a') > -10000 ) {
 				$dDateNow = new DateTime(date('Y-m-d'));
 				$interval = $dDateNow->diff($dExpiration);
-				$sRemaining = $interval->format('%r%a');
+				$sRemaining = $dRemaining. " (".$interval->format('%r%a')." days)";
 			}
 		}
 		return $sRemaining;
