@@ -61,7 +61,7 @@ class AttributeHexaChain extends AttributeString
 	{
 		$sHexa = $sValue;
 		if ( ( strlen($sValue) % 2 ) === 1 ) {
-			$svalue = '0'.$sValue;
+			$sValue = '0'.$sValue;
 		}
 		$sHexa = strtolower(implode(':', str_split($sValue, 2)));
 		return $sHexa;
