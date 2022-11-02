@@ -1,7 +1,12 @@
 <?php
 
 /**
- * Class AttributeDecimalInIB
+ * Class AttributeRemainingDays :
+ * with a stored date attribute, display the reminind days between today and this date
+ * result can be negative
+ * Toto : in GetAsHtml, rentun the result in 
+ *  * orange if less than 30 days 
+ *  * red if less than 7 days
  */
 class AttributeRemainingDays extends AttributeDate
 {
@@ -25,39 +30,23 @@ class AttributeRemainingDays extends AttributeDate
 		return $sRemaining;
 	}
 
-	/**
-	 * @inheritdoc
-	 */
-
 	public function Get($sValue)
 	{
-		return Self::FormatRemainingDays($sValue);
+		return self::FormatRemainingDays($sValue);
 	}
-
-	/**
-	 * @inheritdoc
-	 */
 
 	public function GetValueLabel($sValue, $oHostObject = null)
 	{
-		return Self::FormatRemainingDays($sValue);
+		return self::FormatRemainingDays($sValue);
 	}
 
-	/**
-	 * @inheritdoc
-	 */
-		
 	public function GetAsHTML($sValue, $oHostObject = null, $bLocalize = true)
 	{
-		return Self::FormatRemainingDays($sValue);
+		return self::FormatRemainingDays($sValue);
 	}
 
-	/**
-	 * @inheritdoc
-	 */
-		
 	public function GetAsXML($sAttCode, $bLocalize = true)
 	{
-		return Self::FormatRemainingDays($sAttCode);
+		return self::FormatRemainingDays($sAttCode);
 	}
 }
