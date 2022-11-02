@@ -30,6 +30,7 @@ class AttributeRemainingDays extends AttributeDate
 		return $sRemaining;
 	}
 
+	/*
 	public function Get($sValue)
 	{
 		return self::FormatRemainingDays($sValue);
@@ -40,13 +41,14 @@ class AttributeRemainingDays extends AttributeDate
 		return self::FormatRemainingDays($sValue);
 	}
 
-	public function GetAsHTML($sValue, $oHostObject = null, $bLocalize = true)
-	{
-		return self::FormatRemainingDays($sValue);
-	}
-
 	public function GetAsXML($sAttCode, $bLocalize = true)
 	{
 		return self::FormatRemainingDays($sAttCode);
+	}
+	*/
+
+	public function GetAsHTML($sValue, $oHostObject = null, $bLocalize = true)
+	{
+		return self::FormatRemainingDays($sValue);
 	}
 }
