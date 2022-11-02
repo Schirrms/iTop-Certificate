@@ -61,7 +61,7 @@
 				<field id="serial_number" xsi:type="AttributeHexaChain">
 					<sql>serial_number</sql>
 					<is_null_allowed>true</is_null_allowed>
-					<validation_pattern>^[a-fA-F0-9]$</validation_pattern>
+					<validation_pattern>^[a-fA-F0-9]*$</validation_pattern>
 				</field>
 				<field id="delivery_date" xsi:type="AttributeDate">
 					<sql>delivery_date</sql>
