@@ -10,9 +10,6 @@
  */
 class AttributeDateWithRemainingDays extends AttributeDate
 {
-	/**
-	 * @inheritdoc
-	 */
 
 	private function FormatRemainingDays($dRemaining)
 	{
@@ -21,7 +18,7 @@ class AttributeDateWithRemainingDays extends AttributeDate
 			$dExpiration = new DateTime($dRemaining);
 			$dControl = new DateTime('');
 			$datectrl = $dControl->diff($dExpiration);
-			if ( $datectrl->format('%a') != 0 && $datectrl->format('%r%a') > -10000 ) {
+			if ( $datectrl->format('%r%a') > -10000 ) {
 				$dDateNow = new DateTime(date('Y-m-d'));
 				$interval = $dDateNow->diff($dExpiration);
 				$iInterval = $interval->format('%r%a');
@@ -45,23 +42,6 @@ class AttributeDateWithRemainingDays extends AttributeDate
 		}
 		return $sRemaining;
 	}
-
-	/*
-	public function Get($sValue)
-	{
-		return self::FormatRemainingDays($sValue);
-	}
-
-	public function GetValueLabel($sValue, $oHostObject = null)
-	{
-		return self::FormatRemainingDays($sValue);
-	}
-
-	public function GetAsXML($sAttCode, $bLocalize = true)
-	{
-		return self::FormatRemainingDays($sAttCode);
-	}
-	*/
 
 	public function GetAsHTML($sValue, $oHostObject = null, $bLocalize = true)
 	{
