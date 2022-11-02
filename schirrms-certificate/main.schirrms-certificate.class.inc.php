@@ -26,11 +26,11 @@ class AttributeDateWithRemainingDays extends AttributeDate
 				$interval = $dDateNow->diff($dExpiration);
 				$iInterval = $interval->format('%r%a');
 				if ( $iInterval >= 0 ) {
-					$sDiff = Dict::Format('Certificate/UI:days', $iInterval);
+					$sDiff = Dict::Format('UI:datewithremainingdays_days', $iInterval);
 				}
 				else
 				{
-					$sDiff = Dict::Format('Certificate/UI:latedays', -$iInterval);
+					$sDiff = Dict::Format('UI:datewithremainingdays_latedays', -$iInterval);
 				}
 				$sRemaining = "$dRemaining ($sDiff)";
 			}
