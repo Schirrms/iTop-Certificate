@@ -24,6 +24,8 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'Class:Certificate/Attribute:san' => 'Autres noms de l\'objet du certificat',
 	'Class:Certificate/Attribute:unknown_cis' => 'CI utilisant ce certificat non trouvés dans iTop',
 	'Class:Certificate/Attribute:comment' => 'Commentaires',
+	'Class:Certificate/Attribute:contacts_list' => 'Contacts',
+	'Class:Certificate/Attribute:functionalcis_list' => 'CIs avec ce  certificat',
 	'Class:Certificate/UniquenessRule:serial_number' => 'Le n° de série doit être unique. Un certificat existant dispose déjà de ce n° de série',
 	'Class:lnkCertificateToContact' => 'Contacts pour le certificat',
 	'Class:lnkCertificateToContact/Attribute:certificate_id' => 'Certificat',

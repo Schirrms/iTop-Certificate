@@ -24,6 +24,8 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:Certificate/Attribute:san' => 'Subject Alternate Name(s)',
 	'Class:Certificate/Attribute:unknown_cis' => 'CI using this Certificate not found in iTop',
 	'Class:Certificate/Attribute:comment' => 'Comments',
+	'Class:Certificate/Attribute:contacts_list' => 'Contacts',
+	'Class:Certificate/Attribute:functionalcis_list' => 'CIs with this Certificate',
 	'Class:Certificate/UniquenessRule:serial_number' => 'Serial number must be unique. An existing Certificate has already this serial number',
 	'Class:lnkCertificateToContact' => 'Certificate Contacts',
 	'Class:lnkCertificateToContact/Attribute:certificate_id' => 'Certificate',
