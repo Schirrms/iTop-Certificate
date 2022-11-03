@@ -42,6 +42,16 @@
 					<default_value/>
 					<is_null_allowed>false</is_null_allowed>
 				</field>
+				 <field id="status" xsi:type="AttributeEnum">
+					<values>
+						<value id="active">active</value>
+						<value id="inactive">inactive</value>
+					</values>
+					<sql>status</sql>
+					<default_value>active</default_value>
+					<is_null_allowed>true</is_null_allowed>
+					<display_style>list</display_style>
+				</field>
 				<field id="description" xsi:type="AttributeString">
 					<sql>description</sql>
 					<is_null_allowed>true</is_null_allowed>
@@ -81,6 +91,11 @@
 					<sql>expiration_date</sql>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
+				<field id="unknown_cis" xsi:type="AttributeText">
+					<sql>unknown_cis</sql>
+					<default_value/>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
 				<field id="comment" xsi:type="AttributeText">
 					<sql>comment</sql>
 					<default_value/>
@@ -92,35 +107,61 @@
 			<presentation>
 				<details>
 					<items>
-						<item id="name">
+						<item id="col:col1">
 							<rank>10</rank>
+							<items>
+								<item id="fieldset:Server:baseinfo">
+									<rank>10</rank>
+									<items>
+										<item id="name">
+											<rank>10</rank>
+										</item>
+										<item id="org_id">
+											<rank>20</rank>
+										</item>
+										<item id="status">
+											<rank>25</rank>
+										</item>
+										<item id="description">
+											<rank>30</rank>
+										</item>
+										<item id="provider_name">
+											<rank>40</rank>
+										</item>
+										<item id="provider_org">
+											<rank>45</rank>
+										</item>
+										<item id="serial_number">
+											<rank>50</rank>
+										</item>
+										<item id="delivery_date">
+											<rank>55</rank>
+										</item>
+										<item id="expiration_date">
+											<rank>60</rank>
+										</item>
+									</items>
+								</item>
+							</items>
 						</item>
-						<item id="org_id">
-							<rank>20</rank>
-						</item>
-						<item id="description">
-							<rank>30</rank>
-						</item>
-						<item id="provider_name">
-							<rank>40</rank>
-						</item>
-						<item id="provider_org">
-							<rank>45</rank>
-						</item>
-						<item id="serial_number">
-							<rank>50</rank>
-						</item>
-						<item id="delivery_date">
-							<rank>55</rank>
-						</item>
-						<item id="expiration_date">
-							<rank>60</rank>
-						</item>
-						<item id="san">
-							<rank>70</rank>
-						</item>
-						<item id="comment">
-							<rank>80</rank>
+						<item id="col:col2">
+							<rank>100</rank>
+							<items>
+								<item id="fieldset:Server:otherinfo">
+									<rank>10</rank>
+									<items>
+										<item id="san">
+											<rank>10</rank>
+										</item>
+										<item id="unknown_cis">
+											<rank>20</rank>
+										</item>
+										<item id="comment">
+											<rank>30</rank>
+										</item>
+									</items>
+								</item>
+							</items>
 						</item>
 					</items>
 				</details>
@@ -131,6 +172,9 @@
 						</item>
 						<item id="org_id">
 							<rank>20</rank>
+						</item>
+						<item id="status">
+							<rank>25</rank>
 						</item>
 						<item id="description">
 							<rank>30</rank>
