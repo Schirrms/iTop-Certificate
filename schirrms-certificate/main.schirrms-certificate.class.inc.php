@@ -4,14 +4,15 @@
  * Class AttributeDateWithRemainingDays :
  * For a date attribute, display the data and the remaining days between today and this date
  * result can be negative
- * Toto : in GetAsHtml, rentun the result in 
+ * in GetAsHtml, return the result in 
  *  * orange if less than 30 days 
  *  * red if less than 7 days
+ * but only for active certificates
  */
 class AttributeDateWithRemainingDays extends AttributeDate
 {
 
-	private function FormatRemainingDays($dRemaining)
+	private function FormatRemainingDays($dRemaining, $oHostObject = null)
 	{
 		$sRemaining = '';
 		if ( $dRemaining !== null && preg_match('/^\d{2,4}-\d{1,2}-\d{1,2}$/', $dRemaining) ) {
@@ -25,13 +26,16 @@ class AttributeDateWithRemainingDays extends AttributeDate
 				if ( $iInterval >= 0 ) {
 					$sDiff = Dict::Format('UI:datewithremainingdays_days', $iInterval);
 				}
-				else
-				{
+				else {
 					$sDiff = Dict::Format('UI:datewithremainingdays_latedays', -$iInterval);
 				}
 				$sRemaining = "$dRemaining ($sDiff)";
-				// add some colorations
-				if ($iInterval <= 30 ) {
+				// add some colorations, but only for active Certificates
+				$status = null;
+				if ( $oHostObject !== null) {
+					$status = $oHostObject->Get('status');
+				}
+				if ( $iInterval <= 30  && $status == 'active' ) {
 					$sColor='gold';
 					if ($iInterval <= 7 ) {
 						$sColor='tomato';
@@ -40,12 +44,12 @@ class AttributeDateWithRemainingDays extends AttributeDate
 				}
 			}
 		}
-		return $sRemaining;
+		return "$sRemaining-$status";
 	}
 
 	public function GetAsHTML($sValue, $oHostObject = null, $bLocalize = true)
 	{
-		return self::FormatRemainingDays($sValue);
+		return self::FormatRemainingDays($sValue, $oHostObject);
 	}
 }
 
