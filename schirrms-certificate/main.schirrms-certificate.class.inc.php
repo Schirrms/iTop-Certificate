@@ -44,7 +44,7 @@ class AttributeDateWithRemainingDays extends AttributeDate
 				}
 			}
 		}
-		return "$sRemaining-$status";
+		return $sRemaining;
 	}
 
 	public function GetAsHTML($sValue, $oHostObject = null, $bLocalize = true)

@@ -42,7 +42,7 @@
 					<default_value/>
 					<is_null_allowed>false</is_null_allowed>
 				</field>
-				 <field id="status" xsi:type="AttributeEnum">
+				<field id="status" xsi:type="AttributeEnum">
 					<values>
 						<value id="active">active</value>
 						<value id="inactive">inactive</value>
@@ -101,12 +101,34 @@
 					<default_value/>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
+				<field id="contacts_list" xsi:type="AttributeLinkedSetIndirect">
+					<linked_class>lnkCertificateToContact</linked_class>
+					<ext_key_to_me>certificate_id</ext_key_to_me>
+					<count_min>0</count_min>
+					<count_max>0</count_max>
+					<ext_key_to_remote>contact_id</ext_key_to_remote>
+					<duplicates/>
+				</field>
+				<field id="functionalcis_list" xsi:type="AttributeLinkedSetIndirect">
+					<linked_class>lnkCertificateToFunctionalCI</linked_class>
+					<ext_key_to_me>certificate_id</ext_key_to_me>
+					<count_min>0</count_min>
+					<count_max>0</count_max>
+					<ext_key_to_remote>functionalci_id</ext_key_to_remote>
+					<duplicates/>
+				</field>
 			</fields>
 			<methods>
 			</methods>
 			<presentation>
 				<details>
 					<items>
+						<item id="contacts_list">
+							<rank>10</rank>
+						</item>
+						<item id="functionalcis_list">
+							<rank>20</rank>
+						</item>
 						<item id="col:col1">
 							<rank>10</rank>
 							<items>
@@ -166,7 +188,7 @@
 					</items>
 				</details>
 				<list>
-					 <items>
+					<items>
 						<item id="name">
 							<rank>10</rank>
 						</item>
@@ -188,7 +210,7 @@
 					</items>
 				</list>
 				<search>
-					 <items>
+					<items>
 						<item id="name">
 							<rank>10</rank>
 						</item>
@@ -208,6 +230,199 @@
 				</search>
 			</presentation>
 		</class>
+		<class id="lnkCertificateToFunctionalCI" _delta="define">
+			<parent>cmdbAbstractObject</parent>
+			<properties>
+				<is_link>1</is_link>
+				<category>bizmodel</category>
+				<abstract>false</abstract>
+				<key_type>autoincrement</key_type>
+				<db_table>lnkcertificatetofunctionalci</db_table>
+				<db_key_field>id</db_key_field>
+				<db_final_class_field/>
+				<naming>
+					<attributes>
+						<attribute id="certificate_id"/>
+						<attribute id="functionalci_id"/>
+						<attribute id="url"/>
+						<attribute id="port"/>
+					</attributes>
+				</naming>
+				<display_template/>
+				<icon/>
+				<reconciliation>
+					<attributes>
+						<attribute id="certificate_id"/>
+						<attribute id="functionalci_id"/>
+						<attribute id="url"/>
+						<attribute id="port"/>
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="certificate_id" xsi:type="AttributeExternalKey">
+					<sql>certificate_id</sql>
+					<target_class>Certificate</target_class>
+					<is_null_allowed>false</is_null_allowed>
+					<on_target_delete>DEL_AUTO</on_target_delete>
+				</field>
+				<field id="functionalci_id" xsi:type="AttributeExternalKey">
+					<sql>functionalci_id</sql>
+					<target_class>FunctionalCI</target_class>
+					<is_null_allowed>false</is_null_allowed>
+					<on_target_delete>DEL_AUTO</on_target_delete>
+				</field>
+				<field id="url" xsi:type="AttributeString">
+					<sql>url</sql>
+					<is_null_allowed>false</is_null_allowed>
+				</field>
+				<field id="port" xsi:type="AttributeInteger">
+					<sql>port</sql>
+					<is_null_allowed>false</is_null_allowed>
+					<default_value>443</default_value>
+				</field>
+				<field id="ip" xsi:type="AttributeString">
+					<sql>ip</sql>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
+				<field id="comment" xsi:type="AttributeString">
+					<sql>comment</sql>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
+			</fields>
+			<methods/>
+			<presentation>
+				<details>
+					<items>
+						<item id="certificate_id">
+							<rank>10</rank>
+						</item>
+						<item id="functionalci_id">
+							<rank>20</rank>
+						</item>
+						<item id="url">
+							<rank>30</rank>
+						</item>
+						<item id="port">
+							<rank>40</rank>
+						</item>
+						<item id="ip">
+							<rank>50</rank>
+						</item>
+						<item id="comment">
+							<rank>60</rank>
+						</item>
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="certificate_id">
+							<rank>10</rank>
+						</item>
+						<item id="functionalci_id">
+							<rank>20</rank>
+						</item>
+						<item id="url">
+							<rank>30</rank>
+						</item>
+						<item id="port">
+							<rank>40</rank>
+						</item>
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="certificate_id">
+							<rank>10</rank>
+						</item>
+						<item id="functionalci_id">
+							<rank>20</rank>
+						</item>
+						<item id="url">
+							<rank>30</rank>
+						</item>
+						<item id="port">
+							<rank>40</rank>
+						</item>
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="lnkCertificateToContact" _delta="define">
+			<parent>cmdbAbstractObject</parent>
+			<properties>
+				<is_link>1</is_link>
+				<category>bizmodel</category>
+				<abstract>false</abstract>
+				<key_type>autoincrement</key_type>
+				<db_table>lnkprojecttocontact</db_table>
+				<db_key_field>id</db_key_field>
+				<db_final_class_field/>
+				<naming>
+					<attributes>
+						<attribute id="certificate_id"/>
+						<attribute id="contact_id"/>
+					</attributes>
+				</naming>
+				<display_template/>
+				<icon/>
+				<reconciliation>
+					<attributes>
+						<attribute id="certificate_id"/>
+						<attribute id="contact_id"/>
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="certificate_id" xsi:type="AttributeExternalKey">
+					<sql>certificate_id</sql>
+					<target_class>Certificate</target_class>
+					<is_null_allowed>false</is_null_allowed>
+					<on_target_delete>DEL_AUTO</on_target_delete>
+					<allow_target_creation>true</allow_target_creation>
+				</field>
+				<field id="contact_id" xsi:type="AttributeExternalKey">
+					<sql>contact_id</sql>
+					<target_class>Contact</target_class>
+					<is_null_allowed>false</is_null_allowed>
+					<on_target_delete>DEL_AUTO</on_target_delete>
+					<allow_target_creation>true</allow_target_creation>
+					<tracking_level>none</tracking_level>
+				</field>
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="certificate_id">
+							<rank>10</rank>
+						</item>
+						<item id="contact_id">
+							<rank>20</rank>
+						</item>
+					</items>
+				</details>
+				<list>
+					<items>
+						<item id="certificate_id">
+							<rank>10</rank>
+						</item>
+						<item id="contact_id">
+							<rank>20</rank>
+						</item>
+					</items>
+				</list>
+				<search>
+					<items>
+						<item id="certificate_id">
+							<rank>10</rank>
+						</item>
+						<item id="contact_id">
+							<rank>20</rank>
+						</item>
+					</items>
+				</search>
+			</presentation>
+		</class>
 	</classes>
 	<menus>
 		<menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
@@ -217,7 +432,7 @@
 				<layout>DashboardLayoutOneCol</layout>
 				<title/>
 				<cells>
-					<cell id="2" _delta="must_exist"> <!-- Dashboard -> Software -->
+					<cell id="2" _delta="must_exist">						<!-- Dashboard -> Software -->
 						<rank>0</rank>
 						<dashlets>
 							<dashlet id="89" xsi:type="DashletBadge" _delta="define">
