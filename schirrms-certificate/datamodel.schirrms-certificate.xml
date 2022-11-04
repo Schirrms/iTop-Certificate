@@ -142,25 +142,25 @@
 											<rank>20</rank>
 										</item>
 										<item id="status">
-											<rank>25</rank>
-										</item>
-										<item id="description">
 											<rank>30</rank>
 										</item>
-										<item id="provider_name">
+										<item id="description">
 											<rank>40</rank>
 										</item>
-										<item id="provider_org">
-											<rank>45</rank>
-										</item>
-										<item id="serial_number">
+										<item id="provider_name">
 											<rank>50</rank>
 										</item>
+										<item id="provider_org">
+											<rank>60</rank>
+										</item>
+										<item id="serial_number">
+											<rank>70</rank>
+										</item>
 										<item id="delivery_date">
-											<rank>55</rank>
+											<rank>80</rank>
 										</item>
 										<item id="expiration_date">
-											<rank>60</rank>
+											<rank>90</rank>
 										</item>
 									</items>
 								</item>
@@ -196,16 +196,19 @@
 							<rank>20</rank>
 						</item>
 						<item id="status">
-							<rank>25</rank>
-						</item>
-						<item id="description">
 							<rank>30</rank>
 						</item>
+						<item id="description">
+							<rank>40</rank>
+						</item>
+						<item id="serial_number">
+							<rank>70</rank>
+						</item>
 						<item id="delivery_date">
-							<rank>55</rank>
+							<rank>80</rank>
 						</item>
 						<item id="expiration_date">
-							<rank>60</rank>
+							<rank>90</rank>
 						</item>
 					</items>
 				</list>
@@ -217,14 +220,17 @@
 						<item id="org_id">
 							<rank>20</rank>
 						</item>
-						<item id="description">
+						<item id="status">
 							<rank>30</rank>
 						</item>
+						<item id="serial_number">
+							<rank>70</rank>
+						</item>
 						<item id="delivery_date">
-							<rank>55</rank>
+							<rank>80</rank>
 						</item>
 						<item id="expiration_date">
-							<rank>60</rank>
+							<rank>90</rank>
 						</item>
 					</items>
 				</search>
