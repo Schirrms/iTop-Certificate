@@ -34,7 +34,7 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'Class:lnkCertificateToFunctionalCI/Attribute:certificate_id' => 'Certificat',
 	'Class:lnkCertificateToFunctionalCI/Attribute:functionalci_id' => 'CI',
 	'Class:lnkCertificateToFunctionalCI/Attribute:url' => 'URL : Uniform Resource Locator',
-	'Class:lnkCertificateToFunctionalCI/Attribute:port' => 'Port d\'écoute sur le CI',
+	'Class:lnkCertificateToFunctionalCI/Attribute:url+' => 'Les URLs utilisées pour se connecter sous la forme {host}:{port}',
 	'Class:lnkCertificateToFunctionalCI/Attribute:ip' => 'Adresse IP du CI',
 	'Class:lnkCertificateToFunctionalCI/Attribute:ip+' => 'Adresse IP du CI au moment moment de la mise à jour. À titre d\'information',
 	'Class:lnkCertificateToFunctionalCI/Attribute:comment' => 'Commentaire',

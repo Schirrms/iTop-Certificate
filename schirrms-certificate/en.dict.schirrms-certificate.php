@@ -34,7 +34,7 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:lnkCertificateToFunctionalCI/Attribute:certificate_id' => 'Certificate',
 	'Class:lnkCertificateToFunctionalCI/Attribute:functionalci_id' => 'CI',
 	'Class:lnkCertificateToFunctionalCI/Attribute:url' => 'URL : Uniform Resource Locator',
-	'Class:lnkCertificateToFunctionalCI/Attribute:port' => 'Listening port on CI',
+	'Class:lnkCertificateToFunctionalCI/Attribute:url+' => 'Known URLs to reach this CI, as {host}:{port}',
 	'Class:lnkCertificateToFunctionalCI/Attribute:ip' => 'Listening IP on CI',
 	'Class:lnkCertificateToFunctionalCI/Attribute:ip+' => 'Current listening IP on CI, as the time of the update. Informational only',
 	'Class:lnkCertificateToFunctionalCI/Attribute:comment' => 'Comment',
