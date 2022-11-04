@@ -18,7 +18,7 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'Class:Certificate/Attribute:provider_name' => 'Nom du certificat parent',
 	'Class:Certificate/Attribute:provider_org' => 'Organisation qui a émis le certificat',
 	'Class:Certificate/Attribute:serial_number' => 'Numéro de série du certificat',
-	'Class:Certificate/Attribute:serial_number+' => 'Valeur du n° de série en hexa sans les \':\'',
+	'Class:Certificate/Attribute:serial_number+' => 'Valeur du n° de série en hexa sous la forme \'01:23:45:67:89:ab:cd:ef\'',
 	'Class:Certificate/Attribute:delivery_date' => 'Date d\'émission du certificat',
 	'Class:Certificate/Attribute:expiration_date' => 'Date d\'expiration du certificat',
 	'Class:Certificate/Attribute:san' => 'Autres noms de l\'objet du certificat',

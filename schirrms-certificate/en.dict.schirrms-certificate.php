@@ -18,7 +18,7 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:Certificate/Attribute:provider_name' => 'Issuer Certificate Name',
 	'Class:Certificate/Attribute:provider_org' => 'Issuer Organization',
 	'Class:Certificate/Attribute:serial_number' => 'Certificate Serial Number',
-	'Class:Certificate/Attribute:serial_number+' => 'SN Value in Hexa, without the \':\' char',
+	'Class:Certificate/Attribute:serial_number+' => 'SN Value in Hexa, written in form \'01:23:45:67:89:ab:cd:ef\'',
 	'Class:Certificate/Attribute:delivery_date' => 'Certificate Delivery Date',
 	'Class:Certificate/Attribute:expiration_date' => 'Certificate Expiration Date',
 	'Class:Certificate/Attribute:san' => 'Subject Alternate Name(s)',
