@@ -423,7 +423,7 @@
 				<layout>DashboardLayoutOneCol</layout>
 				<title/>
 				<cells>
-					<cell id="2" _delta="must_exist">						<!-- Dashboard -> Software -->
+					<cell id="3" _delta="must_exist">						<!-- Dashboard -> Software -->
 						<rank>0</rank>
 						<dashlets>
 							<dashlet id="89" xsi:type="DashletBadge" _delta="define">
