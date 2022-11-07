@@ -189,9 +189,6 @@
 				</details>
 				<list>
 					<items>
-						<item id="name">
-							<rank>10</rank>
-						</item>
 						<item id="org_id">
 							<rank>20</rank>
 						</item>
@@ -200,6 +197,9 @@
 						</item>
 						<item id="description">
 							<rank>40</rank>
+						</item>
+						<item id="provider_org">
+							<rank>60</rank>
 						</item>
 						<item id="serial_number">
 							<rank>70</rank>
@@ -222,6 +222,9 @@
 						</item>
 						<item id="status">
 							<rank>30</rank>
+						</item>
+						<item id="provider_org">
+							<rank>60</rank>
 						</item>
 						<item id="serial_number">
 							<rank>70</rank>
