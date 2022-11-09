@@ -497,6 +497,17 @@
 				</details>
 			</presentation>
 		</class>	
+		<class id="StorageSystem" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="certificate_list" _delta="define">
+							<rank>85</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>	
 		<class id="VirtualMachine" _delta="must_exist">
 			<presentation>
 				<details>
