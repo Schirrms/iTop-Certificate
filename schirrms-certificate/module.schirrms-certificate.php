@@ -5,7 +5,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-	'schirrms-certificate/0.1.1',
+	'schirrms-certificate/0.1.2',
 	array(
 		// Identification
 		//

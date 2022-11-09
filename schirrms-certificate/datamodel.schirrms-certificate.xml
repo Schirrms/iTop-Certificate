@@ -440,6 +440,73 @@
 				</field>
 			</fields>
 		</class>
+		<!-- Next classes modified only to add a Cetrificate tab -->
+		<class id="Enclosure" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="certificate_list" _delta="define">
+							<rank>85</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>	
+		<class id="GenericCommDevice" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="certificate_list" _delta="define">
+							<rank>85</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>	
+		<class id="LoadBalancer" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="certificate_list" _delta="define">
+							<rank>85</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>	
+		<class id="ManagementModule" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="certificate_list" _delta="define">
+							<rank>85</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>	
+		<class id="Server" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="certificate_list" _delta="define">
+							<rank>85</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>	
+		<class id="VirtualMachine" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="certificate_list" _delta="define">
+							<rank>85</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>	
 	</classes>
 	<menus>
 		<menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
