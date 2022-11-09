@@ -16,7 +16,8 @@ SetupWebPage::AddModule(
 		//
 		'dependencies' => array(
 			'itop-config-mgmt/2.7.0',
-			'schirrms-generic-connection/0.7.0'
+			'schirrms-generic-connection/0.7.0',
+			'schirrms-loadbalancer/0.1.0'
 		),
 		'mandatory' => false,
 		'visible' => true,
