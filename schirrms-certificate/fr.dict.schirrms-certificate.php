@@ -38,7 +38,7 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'Class:lnkCertificateToFunctionalCI/Attribute:ip' => 'Adresse IP du CI',
 	'Class:lnkCertificateToFunctionalCI/Attribute:ip+' => 'Adresse IP du CI au moment moment de la mise à jour. À titre d\'information',
 	'Class:lnkCertificateToFunctionalCI/Attribute:comment' => 'Commentaire',
-	'Class:FunctionalCI/Attribute:certificates_list' => 'Certificat(s) SSL',
+	'Class:FunctionalCI/Attribute:certificate_list' => 'Certificat(s) SSL',
 	'UI:datewithremainingdays_days' => ' %1$d jour(s) restant(s) ',
 	'UI:datewithremainingdays_latedays' => ' Expiré depuis %1$d jour(s) ',
 ));

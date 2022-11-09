@@ -418,7 +418,7 @@
 		</class>
 		<class id="FunctionalCI" _delta="must_exist">
 			<fields>
-				<field id="certificates_list" xsi:type="AttributeLinkedSetIndirect" _delta="define">
+				<field id="certificate_list" xsi:type="AttributeLinkedSetIndirect" _delta="define">
 					<linked_class>lnkCertificateToFunctionalCI</linked_class>
 					<ext_key_to_me>functionalci_id</ext_key_to_me>
 					<count_min>0</count_min>
@@ -430,7 +430,7 @@
 		</class>
 		<class id="Contact" _delta="must_exist">
 			<fields>
-				<field id="certificates_list" xsi:type="AttributeLinkedSetIndirect" _delta="define">
+				<field id="certificate_list" xsi:type="AttributeLinkedSetIndirect" _delta="define">
 					<linked_class>lnkCertificateToContact</linked_class>
 					<ext_key_to_me>contact_id</ext_key_to_me>
 					<count_min>0</count_min>
@@ -440,7 +440,8 @@
 				</field>
 			</fields>
 		</class>
-		<!-- Next classes modified only to add a Cetrificate tab -->
+		<!-- Next classes modified only to add a Certificate tab 
+		     Annoying : this adds dependencies to 'schirrms-generic-connection/0.7.0' and 'schirrms-loadbalancer' -->
 		<class id="Enclosure" _delta="must_exist">
 			<presentation>
 				<details>

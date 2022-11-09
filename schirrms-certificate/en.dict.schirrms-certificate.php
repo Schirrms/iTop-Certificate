@@ -39,7 +39,7 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:lnkCertificateToFunctionalCI/Attribute:ip+' => 'Current listening IP on CI, as the time of the update. Informational only',
 	'Class:lnkCertificateToFunctionalCI/Attribute:comment' => 'Comment',
 	'Class:lnkCertificateToFunctionalCI/Attribute:certificate_id' => 'Certificate',
-	'Class:FunctionalCI/Attribute:certificates_list' => 'SSL Certificate(s)',
+	'Class:FunctionalCI/Attribute:certificate_list' => 'SSL Certificate(s)',
 	'UI:datewithremainingdays_days' => ' %1$d Day(s) Left',
 	'UI:datewithremainingdays_latedays' => ' Expired since %1$d Day(s) ',
 ));
