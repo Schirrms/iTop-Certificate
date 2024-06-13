@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension format="1.0">
   <extension_code>schirrms-certificate</extension_code>
-  <version>0.1.2</version>
+  <version>0.1.3</version>
   <label><![CDATA[Certificate CIs for iTop]]></label>
   <description><![CDATA[Add a Certtificate CI class, and also a link to any Functional CI, 
     to be able to know where is actually deployed. The link is the Certificate SN.]]></description>
   <mandatory>false</mandatory>
-  <more_info_url></more_info_url>
+  <more_info_url>https://github.com/Schirrms/iTop-Certificate</more_info_url>
 </extension>

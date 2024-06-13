@@ -237,6 +237,16 @@
 						</item>
 					</items>
 				</search>
+				<default_search>
+					<items>
+						<item id="name">
+							<rank>10</rank>
+						</item>
+						<item id="status">
+							<rank>30</rank>
+						</item>
+					</items>
+				</default_search>
 			</presentation>
 		</class>
 		<class id="lnkCertificateToFunctionalCI" _delta="define">
