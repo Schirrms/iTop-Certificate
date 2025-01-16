@@ -5,7 +5,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-	'schirrms-certificate/0.1.3',
+	'schirrms-certificate/0.1.4',
 	array(
 		// Identification
 		//
@@ -17,7 +17,8 @@ SetupWebPage::AddModule(
 		'dependencies' => array(
 			'itop-config-mgmt/2.7.0',
 			'schirrms-generic-connection/0.7.0',
-			'schirrms-loadbalancer/0.1.0'
+			'schirrms-loadbalancer/0.1.0',
+			'schirrms-management-module/0.1.1'
 		),
 		'mandatory' => false,
 		'visible' => true,
